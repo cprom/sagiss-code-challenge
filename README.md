@@ -1,4 +1,4 @@
-# Spootify Coding Challenge 🎧 &nbsp; ![hard](https://img.shields.io/badge/-Hard-red) ![time](https://img.shields.io/badge/%E2%8F%B0-60m-blue) 
+# Spootify Coding Challenge 🎧 &nbsp;
 
 &nbsp;
 # Goals/Outcomes ✨
