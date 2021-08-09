@@ -4,6 +4,7 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 import DiscoverItem from './DiscoverItem';
 import '../styles/_discover-block.scss';
 
+
 function scrollContainer(id, { isNegative } = {}) {
   return () => {
     const scrollableContainer = document.getElementById(id);
@@ -12,6 +13,9 @@ function scrollContainer(id, { isNegative } = {}) {
     scrollableContainer.scrollLeft = scrollableContainer.scrollLeft + amount;
   };
 }
+
+
+
 
 export default function DiscoverBlock({ text, id, data, imagesKey = 'images' }) {
   return (
