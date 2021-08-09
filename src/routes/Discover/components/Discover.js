@@ -11,18 +11,16 @@ export default class Discover extends Component {
     this.state = {
       newReleases: [],
       playlists: [],
-      categories: [],
-      character: []
+      categories: []
     };
   }
 
-
- 
   componentDidMount() {
-   
+
+    //create a variable for the accessToken to be used in accesing the Spotify API
     let accessToken = "BQBb62Q1J3mO1TCo_enU8QPEIbokS9HkrQKmNObWhm9KINi4bglHJ1mZPZ0TgOP90Zyr35oA9R84F9TBEjDFWreVpSiL_7NVH0my6DjQozTGpxuXrtLGoG6Z8sPEkcyW2YMGbIAxGg";
     
-
+    // User Fetch API to get data from Spotify API.
     fetch('https://api.spotify.com/v1/browse/new-releases', {headers: {
       'Authorization': 'Bearer ' + accessToken}
     }).then(response => response.json())
@@ -44,7 +42,6 @@ export default class Discover extends Component {
       fetch('	https://api.spotify.com/v1/browse/featured-playlists', {headers: {
         'Authorization': 'Bearer ' + accessToken
     }} )
-  
         .then(response => response.json())
         .then(data => {
           this.setState({
@@ -59,7 +56,6 @@ export default class Discover extends Component {
           //console.log(data)
         })
      
-    
       fetch('	https://api.spotify.com/v1/browse/categories', {headers: {
         'Authorization': 'Bearer ' + accessToken
     }} )
@@ -76,12 +72,9 @@ export default class Discover extends Component {
           })
           //console.log(data)
         })
-
-    
   }
   
     
-   
   render() {
     const { newReleases, playlists, categories } = this.state;
 
