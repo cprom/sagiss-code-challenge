@@ -18,8 +18,8 @@ export default class Discover extends Component {
   componentDidMount() {
 
     //create a variable for the accessToken to be used in accesing the Spotify API
-    let accessToken = "BQBb62Q1J3mO1TCo_enU8QPEIbokS9HkrQKmNObWhm9KINi4bglHJ1mZPZ0TgOP90Zyr35oA9R84F9TBEjDFWreVpSiL_7NVH0my6DjQozTGpxuXrtLGoG6Z8sPEkcyW2YMGbIAxGg";
-    
+    let accessToken = "BQAmH5zvfVY4LXXaI57-rHV4X9aAi_7aHfvvgeBY5wRX__WYdXk5-0T-1JqNndozMciJkEZfTM2sq5uila1JLslqxBjprrvDF0JVtjKLG9rViaZgTYJMW0FnwEaz_EBN_ZGegPn9Xg";
+
     // User Fetch API to get data from Spotify API.
     fetch('https://api.spotify.com/v1/browse/new-releases', {headers: {
       'Authorization': 'Bearer ' + accessToken}
