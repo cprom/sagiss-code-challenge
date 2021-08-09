@@ -18,6 +18,7 @@ export default class Discover extends Component {
   componentDidMount() {
 
     //create a variable for the accessToken to be used in accesing the Spotify API
+    //This Token will expire after a certain amount of time.  A new token will need to be requested for API call to be successful. 
     let accessToken = "BQAmH5zvfVY4LXXaI57-rHV4X9aAi_7aHfvvgeBY5wRX__WYdXk5-0T-1JqNndozMciJkEZfTM2sq5uila1JLslqxBjprrvDF0JVtjKLG9rViaZgTYJMW0FnwEaz_EBN_ZGegPn9Xg";
 
     // User Fetch API to get data from Spotify API.
