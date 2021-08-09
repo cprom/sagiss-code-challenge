@@ -19,7 +19,7 @@ export default class Discover extends Component {
 
     //create a variable for the accessToken to be used in accesing the Spotify API
     //This Token will expire after a certain amount of time.  A new token will need to be requested for API call to be successful. 
-    let accessToken = "BQAmH5zvfVY4LXXaI57-rHV4X9aAi_7aHfvvgeBY5wRX__WYdXk5-0T-1JqNndozMciJkEZfTM2sq5uila1JLslqxBjprrvDF0JVtjKLG9rViaZgTYJMW0FnwEaz_EBN_ZGegPn9Xg";
+    let accessToken = "BQBIfQNEt2FZxvN4JbGls-OyVxsArE0-pJT5gn2mdsuJtN3hIRIXLCOArnuiFhKAHnVFX085FjVJSNgOIx66idQ891PkmIzUYtyxJoSgPTN5n06ze6eJH4QmsfpkKZTu9GrXqFi5aw";
 
     // User Fetch API to get data from Spotify API.
     fetch('https://api.spotify.com/v1/browse/new-releases', {headers: {
@@ -28,10 +28,11 @@ export default class Discover extends Component {
       .then(data => {
         this.setState({
           newReleases: data.albums.items.map(item => {
-            // console.log(data.albums.items)
+             console.log(data.albums.items)
              return {
                name: item.name,
-               images: item.images[2].url
+               images: item.images[2].url,
+               link: item.external_urls.spotify
              }
           })
           
@@ -47,10 +48,11 @@ export default class Discover extends Component {
         .then(data => {
           this.setState({
             playlists: data.playlists.items.map(item => {
-              //console.log(data.playlists.items)
+              console.log(data.playlists.items)
                return{
                  name: item.name,
-                 images: item.images[0].url
+                 images: item.images[0].url,
+                 link: item.external_urls.spotify
                }
             })
           })
@@ -67,7 +69,8 @@ export default class Discover extends Component {
             categories: data.categories.items.map(item => {
               console.log(data.categories.items)
               return {
-                icons: item.icons[0].url
+                icons: item.icons[0].url,
+                link: item.href
               }
             })
           })

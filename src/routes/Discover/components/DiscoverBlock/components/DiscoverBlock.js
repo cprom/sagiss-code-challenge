@@ -39,8 +39,8 @@ export default function DiscoverBlock({ text, id, data, imagesKey = 'images' }) 
         }
       </div>
       <div className="discover-block__row" id={id}>
-        {data.map(({ [imagesKey]: images, name }) => (
-          <DiscoverItem key={name} images={images} name={name} />
+        {data.map(({ [imagesKey]: images, name, link }) => (
+          <DiscoverItem key={name} images={images} name={name} link={link} />
         ))}
       </div>
     </div>
